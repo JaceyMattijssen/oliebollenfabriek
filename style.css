@@ -62,7 +62,6 @@ a {
     top: 0;
     z-index: 100;
 
-    /* Slight separation from the content underneath */
     box-shadow: 0 3px 0 rgba(59, 27, 18, 0.08);
 }
 
@@ -313,6 +312,7 @@ h2 {
 
 .product-card h3 {
     margin-bottom: 15px;
+
     font-size: 32px;
     line-height: 0.95;
 }
@@ -461,6 +461,7 @@ h2 {
 
 .contact-info h3 {
     margin-bottom: 15px;
+
     font-size: 20px;
 }
 
@@ -506,10 +507,15 @@ h2 {
 .hero-intro {
     max-width: 550px;
 
-    margin: 40px 0 35px;
+    margin: 30px 0 0;
 
     font-size: 17px;
-    line-height: 1.6;
+    line-height: 1.65;
+}
+
+.hero-intro + .hero-intro {
+    margin-top: 20px;
+    margin-bottom: 35px;
 }
 
 .hero-visual {
@@ -568,10 +574,10 @@ h2 {
 }
 
 .about-text {
-    max-width: 430px;
+    max-width: 500px;
 
     font-size: 16px;
-    line-height: 1.65;
+    line-height: 1.7;
 }
 
 .about-text p {
@@ -587,7 +593,26 @@ h2 {
 
 .about-decoration img {
     width: 150px;
+
     transform: rotate(12deg);
+}
+
+
+/* =========================================================
+   DUURZAAMHEID — SECTION INTRO
+   ========================================================= */
+
+.section-heading-intro {
+    max-width: 550px;
+
+    margin-top: 30px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 17px;
+    font-weight: 400;
+
+    line-height: 1.65;
 }
 
 
@@ -614,38 +639,311 @@ h2 {
 .cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
     gap: 20px;
 }
 
 .card {
-    min-height: 330px;
+    min-height: 470px;
 
-    padding: 30px;
+    padding: 35px;
 
     border: 2px solid var(--cream);
 
     display: flex;
     flex-direction: column;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.card:hover {
+    background: var(--cream);
+    color: var(--brown);
 }
 
 .card-number {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 
     font-size: 12px;
     font-weight: 700;
 }
 
 .card h3 {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 
-    font-size: 28px;
+    font-size: 30px;
     line-height: 0.95;
 }
 
-.card p:last-child {
-    max-width: 500px;
+.card p {
+    max-width: 560px;
 
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.card p + p {
+    margin-top: 18px;
+}
+
+
+/* =========================================================
+   DUURZAAMHEID — PRODUCTION BREAK
+   ========================================================= */
+
+.production-break {
+    min-height: 600px;
+
+    padding: 100px 8vw;
+
+    background: var(--orange);
+
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+    border-bottom: 2px solid var(--brown);
+}
+
+.production-break-number {
+    font-family: "Archivo Black", sans-serif;
+
+    font-size: clamp(70px, 10vw, 150px);
+
+    line-height: 0.8;
+}
+
+.production-break-content {
+    max-width: 900px;
+}
+
+.production-break-content h2 {
+    margin-bottom: 45px;
+
+    font-size: clamp(60px, 8vw, 120px);
+
+    line-height: 0.83;
+}
+
+.production-break-content > p:last-child {
+    max-width: 520px;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   DUURZAAMHEID — FEATURE SECTIONS
+   ========================================================= */
+
+.feature-section {
+    min-height: 750px;
+
+    padding: 100px 8vw;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 90px;
+
+    align-items: center;
+
+    border-bottom: 2px solid var(--brown);
+}
+
+.feature-reverse .feature-content {
+    order: 1;
+}
+
+.feature-reverse .feature-visual {
+    order: 2;
+}
+
+.feature-visual {
+    min-height: 520px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orange-feature {
+    background: var(--orange);
+}
+
+.orange-feature img {
+    width: 65%;
+
+    transform: rotate(-10deg);
+}
+
+.cream-feature {
+    border: 2px solid var(--brown);
+
+    padding: 50px;
+}
+
+.feature-content {
+    max-width: 600px;
+}
+
+.feature-content h2 {
+    margin-bottom: 45px;
+
+    font-size: clamp(55px, 7vw, 105px);
+
+    line-height: 0.84;
+}
+
+.feature-content p:not(.section-number) {
+    max-width: 520px;
+
+    margin-bottom: 22px;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   INGREDIENT LIST
+   ========================================================= */
+
+.ingredient-list {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.ingredient-list span {
+    padding: 18px 0;
+
+    border-bottom: 2px solid var(--brown);
+
+    font-family: "Archivo Black", sans-serif;
+
+    font-size: clamp(25px, 3vw, 45px);
+
+    line-height: 1;
+}
+
+.ingredient-list span:first-child {
+    border-top: 2px solid var(--brown);
+}
+
+
+/* =========================================================
+   DUURZAAMHEID — FOOD WASTE
+   ========================================================= */
+
+.waste-section {
+    min-height: 650px;
+
+    padding: 110px 8vw;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 100px;
+
+    align-items: center;
+
+    background: var(--cream);
+
+    border-bottom: 2px solid var(--brown);
+}
+
+.waste-heading h2 {
+    font-size: clamp(55px, 7vw, 105px);
+
+    line-height: 0.84;
+}
+
+.waste-content {
+    max-width: 500px;
+}
+
+.waste-content p {
+    margin-bottom: 25px;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   DUURZAAMHEID — GOALS
+   ========================================================= */
+
+.goals {
+    padding: 120px 8vw;
+
+    background: var(--brown);
+    color: var(--cream);
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 100px;
+}
+
+.goals-heading {
+    position: sticky;
+    top: 130px;
+
+    align-self: start;
+}
+
+.goals-heading h2 {
+    font-size: clamp(55px, 6.5vw, 100px);
+
+    line-height: 0.84;
+}
+
+.goal-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.goal {
+    padding: 30px 0;
+
+    display: grid;
+    grid-template-columns: 70px 1fr;
+
+    gap: 25px;
+
+    border-top: 2px solid var(--cream);
+}
+
+.goal:last-child {
+    border-bottom: 2px solid var(--cream);
+}
+
+.goal > span {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.goal h3 {
+    margin-bottom: 10px;
+
+    font-size: 25px;
+
+    line-height: 1;
+}
+
+.goal p {
+    max-width: 450px;
+
+    font-size: 15px;
     line-height: 1.6;
 }
 
@@ -663,6 +961,7 @@ h2 {
     grid-template-columns: 1fr 1fr;
 
     align-items: center;
+
     gap: 80px;
 
     border-bottom: 2px solid var(--brown);
@@ -670,11 +969,12 @@ h2 {
 
 .future h2 {
     font-size: clamp(60px, 8vw, 120px);
+
     line-height: 0.83;
 }
 
 .future-text {
-    max-width: 430px;
+    max-width: 500px;
 
     margin-top: 50px;
 
@@ -694,6 +994,7 @@ h2 {
 
 .orange-circle {
     width: min(500px, 40vw);
+
     aspect-ratio: 1;
 
     border-radius: 50%;
@@ -707,6 +1008,7 @@ h2 {
 
 .orange-circle img {
     width: 65%;
+
     transform: rotate(-12deg);
 }
 
@@ -731,6 +1033,7 @@ h2 {
     margin-bottom: 50px;
 
     font-size: clamp(55px, 7vw, 110px);
+
     line-height: 0.85;
 }
 
@@ -754,6 +1057,7 @@ h2 {
 
 .footer img {
     width: 210px;
+
     filter: brightness(0) invert(1);
 }
 
@@ -808,12 +1112,13 @@ h2 {
         grid-template-columns: 1fr;
     }
 
+
     .cards {
         grid-template-columns: 1fr;
     }
 
-    .product-card {
-        min-height: 450px;
+    .card {
+        min-height: auto;
     }
 
 
@@ -821,7 +1126,10 @@ h2 {
     .about,
     .future,
     .contact,
-    .sustainability-teaser {
+    .sustainability-teaser,
+    .feature-section,
+    .waste-section,
+    .goals {
         grid-template-columns: 1fr;
     }
 
@@ -835,8 +1143,55 @@ h2 {
     }
 
 
+    .about {
+        gap: 60px;
+    }
+
+
     .sustainability-teaser {
         gap: 60px;
+    }
+
+
+    .production-break {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .production-break-number {
+        font-size: 90px;
+    }
+
+
+    .feature-section {
+        gap: 60px;
+    }
+
+    .feature-reverse .feature-content {
+        order: 1;
+    }
+
+    .feature-reverse .feature-visual {
+        order: 2;
+    }
+
+
+    .feature-visual {
+        min-height: 400px;
+    }
+
+
+    .waste-section {
+        gap: 60px;
+    }
+
+
+    .goals {
+        gap: 70px;
+    }
+
+    .goals-heading {
+        position: static;
     }
 
 
@@ -903,6 +1258,7 @@ h2 {
     .home-hero-visual .hero-oliebol,
     .hero-visual .hero-oliebol {
         width: 230px;
+
         right: 5%;
     }
 
@@ -911,10 +1267,19 @@ h2 {
     }
 
 
+    .hero-intro {
+        font-size: 16px;
+    }
+
+
     .products,
     .about-home,
     .about,
     .sustainability,
+    .production-break,
+    .feature-section,
+    .waste-section,
+    .goals,
     .future,
     .contact,
     .cta {
@@ -938,8 +1303,92 @@ h2 {
     }
 
 
-    .product-card {
-        min-height: 450px;
+    .section-heading-intro {
+        font-size: 16px;
+    }
+
+
+    .card {
+        padding: 25px;
+    }
+
+    .card-number {
+        margin-bottom: 45px;
+    }
+
+    .card h3 {
+        font-size: 26px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+
+    .production-break-number {
+        font-size: 70px;
+    }
+
+    .production-break-content h2 {
+        font-size: 50px;
+    }
+
+
+    .feature-section {
+        gap: 45px;
+    }
+
+    .feature-content h2 {
+        font-size: 50px;
+    }
+
+    .feature-visual {
+        min-height: 320px;
+    }
+
+    .orange-feature img {
+        width: 65%;
+    }
+
+    .cream-feature {
+        padding: 30px;
+    }
+
+
+    .ingredient-list span {
+        font-size: 28px;
+    }
+
+
+    .waste-heading h2 {
+        font-size: 50px;
+    }
+
+
+    .waste-content p {
+        font-size: 15px;
+    }
+
+
+    .goals {
+        gap: 60px;
+    }
+
+    .goals-heading h2 {
+        font-size: 50px;
+    }
+
+    .goal {
+        grid-template-columns: 40px 1fr;
+        gap: 15px;
+    }
+
+    .goal h3 {
+        font-size: 22px;
+    }
+
+    .goal p {
+        font-size: 14px;
     }
 
 
@@ -955,5 +1404,4 @@ h2 {
 
         gap: 20px;
     }
-
 }
