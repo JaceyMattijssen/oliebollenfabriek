@@ -501,7 +501,7 @@ h2 {
 
 
 /* =========================================================
-   HOMEPAGE — SUSTAINABILITY TEASER
+   HOMEPAGE — SUSTAINABILITY
    ========================================================= */
 
 .sustainability-teaser {
@@ -534,11 +534,6 @@ h2 {
     font-size: 16px;
     line-height: 1.7;
 }
-
-
-/* =========================================================
-   HOMEPAGE — SUSTAINABILITY HIGHLIGHTS
-   ========================================================= */
 
 .sustainability-highlights {
     display: grid;
@@ -663,7 +658,6 @@ h2 {
 
 .contact h2 {
     font-size: clamp(55px, 7vw, 105px);
-
     line-height: 0.85;
 }
 
@@ -697,12 +691,10 @@ h2 {
     background: var(--orange);
 
     position: relative;
-
     overflow: hidden;
 
     display: flex;
     flex-direction: column;
-
     justify-content: center;
 }
 
@@ -728,16 +720,16 @@ h2 {
 
 
 /* =========================================================
-   DUURZAAMHEID — HERO
+   SUSTAINABILITY — HERO
    ========================================================= */
 
-.hero {
+.sustainability-hero {
     min-height: 750px;
 
     padding: 90px 8vw;
 
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 1.1fr 0.9fr;
 
     align-items: center;
 
@@ -746,121 +738,101 @@ h2 {
     overflow: hidden;
 }
 
-.hero-content {
+.sustainability-hero-content {
     position: relative;
     z-index: 2;
 }
 
-.hero h1 {
-    max-width: 1000px;
+.sustainability-hero h1 {
+    max-width: 900px;
 
-    font-size: clamp(55px, 7.5vw, 125px);
+    font-size: clamp(60px, 8vw, 125px);
 
-    line-height: 0.88;
+    line-height: 0.84;
 }
 
-.hero-intro {
-    max-width: 550px;
+.sustainability-hero .hero-description {
+    max-width: 560px;
 
-    margin: 30px 0 0;
+    margin: 40px 0 0;
 
     font-size: 17px;
 
-    line-height: 1.65;
+    line-height: 1.7;
 }
 
-.hero-intro + .hero-intro {
-    margin-top: 20px;
-    margin-bottom: 35px;
-}
+.sustainability-hero-visual {
+    min-height: 520px;
 
-.hero-visual {
     position: relative;
 
-    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.hero-visual .hero-oliebol {
-    position: absolute;
+.sustainability-hero-visual img {
+    width: min(430px, 35vw);
 
-    width: min(430px, 34vw);
-
-    right: 0;
-    top: 80px;
-
-    transform: rotate(-8deg);
+    transform: rotate(-10deg);
 }
 
-.hero-visual .hero-oliebol-small {
+.sustainability-hero-visual span {
     position: absolute;
 
-    width: 150px;
+    right: 5%;
+    bottom: 30px;
 
-    right: 20px;
-    bottom: 20px;
+    font-size: 12px;
+    font-weight: 700;
 
-    transform: rotate(15deg);
+    line-height: 1.3;
 }
 
 
 /* =========================================================
-   DUURZAAMHEID — INTRO
+   SUSTAINABILITY — INTRO
    ========================================================= */
 
-.about {
-    min-height: 700px;
+.sustainability-intro {
+    min-height: 650px;
 
     padding: 110px 8vw;
 
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 1.1fr 0.9fr;
 
-    gap: 70px;
+    gap: 80px;
+
+    align-items: center;
 
     border-bottom: 2px solid var(--brown);
 }
 
-.about-heading h2 {
-    width: 100%;
+.sustainability-intro-heading h2 {
+    font-size: clamp(50px, 6.5vw, 100px);
 
-    font-size: clamp(42px, 5.2vw, 82px);
-
-    line-height: 0.9;
-
-    letter-spacing: -1.5px;
+    line-height: 0.85;
 }
 
-.about-text {
+.sustainability-intro-content {
     max-width: 500px;
+}
+
+.sustainability-intro-content p {
+    margin-bottom: 25px;
 
     font-size: 16px;
 
     line-height: 1.7;
 }
 
-.about-text p {
-    margin-bottom: 25px;
-}
-
-.about-decoration {
-    margin-top: 60px;
-
-    display: flex;
-    justify-content: flex-end;
-}
-
-.about-decoration img {
-    width: 150px;
-
-    transform: rotate(12deg);
-}
-
 
 /* =========================================================
-   DUURZAAMHEID — CARDS
+   SUSTAINABILITY — FOUR PILLARS
    ========================================================= */
 
-.sustainability {
+.pillars {
     padding: 110px 8vw;
 
     background: var(--brown);
@@ -868,35 +840,37 @@ h2 {
     color: var(--cream);
 }
 
-.section-heading.light {
+.pillars-heading {
+    max-width: 850px;
+
     margin-bottom: 80px;
 }
 
-.section-heading.light h2 {
+.pillars-heading h2 {
+    margin-bottom: 35px;
+
     font-size: clamp(55px, 7vw, 105px);
 
-    line-height: 0.85;
+    line-height: 0.84;
 }
 
-.section-heading-intro {
-    max-width: 550px;
+.pillars-heading > p:last-child {
+    max-width: 500px;
 
-    margin-top: 30px;
+    font-size: 16px;
 
-    font-size: 17px;
-
-    line-height: 1.65;
+    line-height: 1.7;
 }
 
-.cards {
+.pillar-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
     gap: 20px;
 }
 
-.card {
-    min-height: 470px;
+.pillar {
+    min-height: 330px;
 
     padding: 35px;
 
@@ -904,208 +878,136 @@ h2 {
 
     display: flex;
     flex-direction: column;
-
-    transition:
-        background 0.2s ease,
-        color 0.2s ease;
 }
 
-.card:hover {
-    background: var(--cream);
+.pillar-orange {
+    background: var(--orange);
+
     color: var(--brown);
+
+    border-color: var(--brown);
 }
 
-.card-number {
-    margin-bottom: 60px;
+.pillar > span {
+    margin-bottom: 70px;
 
     font-size: 12px;
+
     font-weight: 700;
 }
 
-.card h3 {
-    margin-bottom: 25px;
+.pillar h3 {
+    margin-bottom: 20px;
 
-    font-size: 30px;
+    font-size: 34px;
 
     line-height: 0.95;
 }
 
-.card p {
-    max-width: 560px;
+.pillar p {
+    max-width: 470px;
 
     font-size: 15px;
 
-    line-height: 1.65;
-}
-
-.card p + p {
-    margin-top: 18px;
+    line-height: 1.6;
 }
 
 
 /* =========================================================
-   DUURZAAMHEID — PRODUCTION BREAK
+   SUSTAINABILITY — PEOPLE
    ========================================================= */
 
-.production-break {
-    min-height: 600px;
-
-    padding: 100px 8vw;
-
-    background: var(--orange);
-
-    display: grid;
-    grid-template-columns: 0.25fr 1fr;
-
-    align-items: center;
-
-    gap: 60px;
-
-    border-bottom: 2px solid var(--brown);
-}
-
-.production-break-number {
-    font-family: "Archivo Black", sans-serif;
-
-    font-size: clamp(70px, 10vw, 150px);
-
-    line-height: 0.8;
-}
-
-.production-break-content {
-    max-width: 900px;
-}
-
-.production-break-content h2 {
-    margin-bottom: 45px;
-
-    font-size: clamp(60px, 8vw, 120px);
-
-    line-height: 0.83;
-}
-
-.production-break-content > p:last-child {
-    max-width: 520px;
-
-    font-size: 17px;
-
-    line-height: 1.7;
-}
-
-
-/* =========================================================
-   DUURZAAMHEID — FEATURES
-   ========================================================= */
-
-.feature-section {
+.people-section {
     min-height: 750px;
 
-    padding: 100px 8vw;
+    padding: 120px 8vw;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.9fr 1.1fr;
 
-    gap: 90px;
-
-    align-items: center;
+    gap: 100px;
 
     border-bottom: 2px solid var(--brown);
 }
 
-.feature-reverse .feature-content {
-    order: 1;
+.people-heading {
+    align-self: start;
+
+    position: sticky;
+
+    top: 130px;
 }
 
-.feature-reverse .feature-visual {
-    order: 2;
-}
-
-.feature-visual {
-    min-height: 520px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.orange-feature {
-    background: var(--orange);
-}
-
-.orange-feature img {
-    width: 65%;
-
-    transform: rotate(-10deg);
-}
-
-.cream-feature {
-    border: 2px solid var(--brown);
-
-    padding: 50px;
-}
-
-.feature-content {
-    max-width: 600px;
-}
-
-.feature-content h2 {
-    margin-bottom: 45px;
-
+.people-heading h2 {
     font-size: clamp(55px, 7vw, 105px);
 
     line-height: 0.84;
 }
 
-.feature-content p:not(.section-number) {
-    max-width: 520px;
-
-    margin-bottom: 22px;
-
-    font-size: 16px;
-
-    line-height: 1.7;
+.people-content {
+    max-width: 650px;
 }
 
+.large-intro {
+    margin-bottom: 60px;
 
-/* =========================================================
-   INGREDIENT LIST
-   ========================================================= */
+    font-size: 21px;
 
-.ingredient-list {
-    width: 100%;
+    line-height: 1.5;
+}
 
+.people-list {
     display: flex;
     flex-direction: column;
 }
 
-.ingredient-list span {
-    padding: 18px 0;
+.people-item {
+    padding: 30px 0;
 
-    border-bottom: 2px solid var(--brown);
+    display: grid;
+    grid-template-columns: 70px 1fr;
 
-    font-family: "Archivo Black", sans-serif;
+    gap: 25px;
 
-    font-size: clamp(25px, 3vw, 45px);
-
-    line-height: 1;
+    border-top: 2px solid var(--brown);
 }
 
-.ingredient-list span:first-child {
-    border-top: 2px solid var(--brown);
+.people-item:last-child {
+    border-bottom: 2px solid var(--brown);
+}
+
+.people-item > span {
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.people-item h3 {
+    margin-bottom: 12px;
+
+    font-size: 25px;
+}
+
+.people-item p {
+    max-width: 500px;
+
+    font-size: 15px;
+
+    line-height: 1.6;
 }
 
 
 /* =========================================================
-   DUURZAAMHEID — FOOD WASTE
+   SUSTAINABILITY — FAIR TRADE
    ========================================================= */
 
-.waste-section {
-    min-height: 650px;
+.fair-trade {
+    min-height: 750px;
 
     padding: 110px 8vw;
 
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 0.8fr 1.2fr;
 
     gap: 100px;
 
@@ -1114,27 +1016,322 @@ h2 {
     border-bottom: 2px solid var(--brown);
 }
 
-.waste-heading h2 {
+.fair-trade-visual {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.fair-trade-circle {
+    width: min(450px, 35vw);
+
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+
+    background: var(--orange);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.fair-trade-circle span {
+    font-family: "Archivo Black", sans-serif;
+
+    font-size: clamp(35px, 5vw, 70px);
+
+    line-height: 0.85;
+
+    text-align: center;
+}
+
+.fair-trade-content {
+    max-width: 650px;
+}
+
+.fair-trade-content h2 {
+    margin-bottom: 45px;
+
     font-size: clamp(55px, 7vw, 105px);
 
     line-height: 0.84;
 }
 
-.waste-content {
-    max-width: 500px;
-}
+.fair-trade-content > p:not(.section-number) {
+    max-width: 550px;
 
-.waste-content p {
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 
     font-size: 16px;
 
     line-height: 1.7;
 }
 
+.fair-trade-points {
+    margin-top: 45px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.fair-trade-points span {
+    padding: 10px 14px;
+
+    border: 2px solid var(--brown);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
 
 /* =========================================================
-   DUURZAAMHEID — GOALS
+   SUSTAINABILITY — ENVIRONMENT
+   ========================================================= */
+
+.environment {
+    padding: 120px 8vw;
+
+    background: var(--brown);
+
+    color: var(--cream);
+}
+
+.environment-heading {
+    max-width: 900px;
+
+    margin-bottom: 80px;
+}
+
+.environment-heading h2 {
+    margin-bottom: 35px;
+
+    font-size: clamp(55px, 7vw, 105px);
+
+    line-height: 0.84;
+}
+
+.environment-heading > p:last-child {
+    max-width: 520px;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+.environment-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.environment-card {
+    min-height: 350px;
+
+    padding: 35px;
+
+    border: 2px solid var(--cream);
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.orange-environment {
+    background: var(--orange);
+
+    color: var(--brown);
+
+    border-color: var(--brown);
+}
+
+.environment-card > span {
+    margin-bottom: 65px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.environment-card h3 {
+    margin-bottom: 20px;
+
+    font-size: 30px;
+
+    line-height: 0.95;
+}
+
+.environment-card p {
+    max-width: 500px;
+
+    font-size: 15px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   SUSTAINABILITY — PRODUCTION CHAIN
+   ========================================================= */
+
+.production-chain {
+    min-height: 600px;
+
+    padding: 110px 8vw;
+
+    background: var(--orange);
+
+    border-bottom: 2px solid var(--brown);
+}
+
+.production-chain-heading {
+    margin-bottom: 80px;
+}
+
+.production-chain-heading h2 {
+    font-size: clamp(60px, 8vw, 120px);
+
+    line-height: 0.83;
+}
+
+.chain {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.chain-step {
+    min-width: 150px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.chain-step span {
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.chain-step strong {
+    font-family: "Archivo Black", sans-serif;
+
+    font-size: 24px;
+
+    line-height: 1;
+}
+
+.chain-line {
+    width: 80px;
+
+    height: 2px;
+
+    background: var(--brown);
+
+    margin: 0 15px;
+}
+
+
+/* =========================================================
+   SUSTAINABILITY — COMMUNITY
+   ========================================================= */
+
+.community {
+    min-height: 750px;
+
+    padding: 120px 8vw;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    border-bottom: 2px solid var(--brown);
+}
+
+.community-content {
+    max-width: 650px;
+}
+
+.community-content h2 {
+    margin-bottom: 45px;
+
+    font-size: clamp(50px, 6.5vw, 95px);
+
+    line-height: 0.84;
+}
+
+.community-content > p:not(.section-number) {
+    max-width: 500px;
+
+    margin-bottom: 20px;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+.community-list {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.community-item {
+    padding: 30px 0;
+
+    display: grid;
+
+    grid-template-columns: 70px 1fr;
+
+    gap: 25px;
+
+    border-top: 2px solid var(--brown);
+}
+
+.community-item:last-child {
+    border-bottom: 2px solid var(--brown);
+}
+
+.community-item > span {
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.community-item h3 {
+    margin-bottom: 12px;
+
+    font-size: 24px;
+}
+
+.community-item p {
+    max-width: 480px;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SUSTAINABILITY — GOALS
    ========================================================= */
 
 .goals {
@@ -1145,6 +1342,7 @@ h2 {
     color: var(--cream);
 
     display: grid;
+
     grid-template-columns: 0.9fr 1.1fr;
 
     gap: 100px;
@@ -1166,6 +1364,7 @@ h2 {
 
 .goal-list {
     display: flex;
+
     flex-direction: column;
 }
 
@@ -1173,6 +1372,7 @@ h2 {
     padding: 30px 0;
 
     display: grid;
+
     grid-template-columns: 70px 1fr;
 
     gap: 25px;
@@ -1199,7 +1399,7 @@ h2 {
 }
 
 .goal p {
-    max-width: 450px;
+    max-width: 500px;
 
     font-size: 15px;
 
@@ -1208,7 +1408,7 @@ h2 {
 
 
 /* =========================================================
-   DUURZAAMHEID — FUTURE
+   SUSTAINABILITY — FUTURE
    ========================================================= */
 
 .future {
@@ -1217,6 +1417,7 @@ h2 {
     padding: 120px 8vw;
 
     display: grid;
+
     grid-template-columns: 1fr 1fr;
 
     align-items: center;
@@ -1250,6 +1451,7 @@ h2 {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 }
 
@@ -1265,6 +1467,7 @@ h2 {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 }
 
@@ -1276,11 +1479,11 @@ h2 {
 
 
 /* =========================================================
-   DUURZAAMHEID — CTA
+   SUSTAINABILITY — CONCLUSION
    ========================================================= */
 
-.cta {
-    min-height: 600px;
+.sustainability-conclusion {
+    min-height: 650px;
 
     padding: 110px 8vw;
 
@@ -1291,14 +1494,28 @@ h2 {
     flex-direction: column;
 
     justify-content: center;
+
+    align-items: flex-start;
 }
 
-.cta h2 {
-    margin-bottom: 50px;
+.sustainability-conclusion h2 {
+    max-width: 1100px;
 
-    font-size: clamp(55px, 7vw, 110px);
+    margin-bottom: 45px;
 
-    line-height: 0.85;
+    font-size: clamp(60px, 8vw, 125px);
+
+    line-height: 0.82;
+}
+
+.sustainability-conclusion > p:not(.eyebrow) {
+    max-width: 500px;
+
+    margin-bottom: 35px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
 }
 
 
@@ -1357,37 +1574,35 @@ h2 {
 
 
     .home-hero,
-    .hero,
+    .sustainability-hero,
     .brand-story,
     .process,
     .about-home,
-    .about,
+    .sustainability-intro,
+    .people-section,
+    .fair-trade,
+    .community,
     .future,
     .contact,
-    .sustainability-teaser,
-    .feature-section,
-    .waste-section,
-    .goals {
+    .sustainability-teaser {
         grid-template-columns: 1fr;
     }
 
 
     .home-hero-visual,
-    .hero-visual {
+    .sustainability-hero-visual {
         height: 350px;
     }
 
-    .home-hero-visual .hero-oliebol,
-    .hero-visual .hero-oliebol {
+    .home-hero-visual .hero-oliebol {
         width: 300px;
 
         right: 10%;
         top: 20px;
     }
 
-
-    .brand-story {
-        gap: 60px;
+    .sustainability-hero-visual img {
+        width: 300px;
     }
 
 
@@ -1424,56 +1639,46 @@ h2 {
     }
 
 
-    .cards {
+    .pillar-grid {
         grid-template-columns: 1fr;
     }
 
-    .card {
-        min-height: auto;
+
+    .people-heading,
+    .goals-heading {
+        position: static;
     }
 
 
-    .about-home {
-        gap: 60px;
-    }
-
-    .about-home-visual {
-        min-height: 400px;
-    }
-
-
-    .about {
+    .people-section,
+    .fair-trade,
+    .community {
         gap: 60px;
     }
 
 
-    .production-break {
+    .environment-grid {
         grid-template-columns: 1fr;
-
-        gap: 30px;
-    }
-
-    .production-break-number {
-        font-size: 90px;
     }
 
 
-    .feature-section {
-        gap: 60px;
+    .chain {
+        flex-wrap: wrap;
+
+        justify-content: flex-start;
+
+        gap: 20px;
     }
 
-
-    .waste-section {
-        gap: 60px;
+    .chain-line {
+        width: 40px;
     }
 
 
     .goals {
-        gap: 70px;
-    }
+        grid-template-columns: 1fr;
 
-    .goals-heading {
-        position: static;
+        gap: 70px;
     }
 
 
@@ -1493,6 +1698,7 @@ h2 {
 
     .home-cta img {
         width: 300px;
+
         right: 5%;
     }
 }
@@ -1530,29 +1736,28 @@ h2 {
 
 
     .home-hero,
-    .hero {
+    .sustainability-hero {
         padding: 70px 6vw;
     }
 
     .home-hero h1,
-    .hero h1 {
+    .sustainability-hero h1 {
         font-size: 48px;
     }
 
     .home-hero-visual,
-    .hero-visual {
+    .sustainability-hero-visual {
         height: 280px;
     }
 
-    .home-hero-visual .hero-oliebol,
-    .hero-visual .hero-oliebol {
+    .home-hero-visual .hero-oliebol {
         width: 230px;
 
         right: 5%;
     }
 
-    .hero-oliebol-small {
-        width: 90px;
+    .sustainability-hero-visual img {
+        width: 230px;
     }
 
 
@@ -1565,22 +1770,31 @@ h2 {
     .products,
     .process,
     .about-home,
-    .about,
-    .sustainability,
-    .production-break,
-    .feature-section,
-    .waste-section,
+    .sustainability-intro,
+    .pillars,
+    .people-section,
+    .fair-trade,
+    .environment,
+    .production-chain,
+    .community,
     .goals,
     .future,
     .contact,
     .cta,
-    .home-cta {
+    .home-cta,
+    .sustainability-conclusion,
+    .sustainability-teaser {
         padding: 75px 6vw;
     }
 
 
     .brand-story-heading h2,
     .products .section-heading h2,
+    .sustainability-intro-heading h2,
+    .pillars-heading h2,
+    .people-heading h2,
+    .environment-heading h2,
+    .community-content h2,
     .section-heading.light h2,
     .about-home-content h2,
     .sustainability-teaser h2,
@@ -1621,99 +1835,95 @@ h2 {
     }
 
 
-    .about-heading h2 {
-        font-size: 45px;
-    }
+    .pillar {
+        min-height: 280px;
 
-
-    .section-heading-intro {
-        font-size: 16px;
-    }
-
-
-    .card {
         padding: 25px;
     }
 
-    .card-number {
-        margin-bottom: 45px;
+    .pillar > span {
+        margin-bottom: 50px;
     }
 
-    .card h3 {
-        font-size: 26px;
-    }
-
-    .card p {
-        font-size: 14px;
-    }
-
-
-    .production-break-number {
-        font-size: 70px;
-    }
-
-    .production-break-content h2 {
-        font-size: 50px;
-    }
-
-
-    .feature-section {
-        gap: 45px;
-    }
-
-    .feature-content h2 {
-        font-size: 50px;
-    }
-
-    .feature-visual {
-        min-height: 320px;
-    }
-
-    .cream-feature {
-        padding: 30px;
-    }
-
-
-    .ingredient-list span {
+    .pillar h3 {
         font-size: 28px;
     }
 
 
-    .waste-heading h2 {
-        font-size: 50px;
+    .large-intro {
+        font-size: 18px;
     }
 
 
-    .waste-content p {
-        font-size: 15px;
-    }
-
-
-    .goals {
-        gap: 60px;
-    }
-
-    .goals-heading h2 {
-        font-size: 50px;
-    }
-
+    .people-item,
+    .community-item,
     .goal {
         grid-template-columns: 40px 1fr;
 
         gap: 15px;
     }
 
-    .goal h3 {
-        font-size: 22px;
+    .people-item h3,
+    .community-item h3 {
+        font-size: 21px;
     }
 
-    .goal p {
-        font-size: 14px;
+
+    .fair-trade-circle {
+        width: 280px;
+    }
+
+    .fair-trade-content h2 {
+        font-size: 50px;
+    }
+
+    .fair-trade-points {
+        gap: 8px;
+    }
+
+
+    .environment-card {
+        min-height: 300px;
+
+        padding: 25px;
+    }
+
+    .environment-card > span {
+        margin-bottom: 45px;
+    }
+
+
+    .production-chain-heading h2 {
+        font-size: 55px;
+    }
+
+    .chain {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .chain-line {
+        width: 2px;
+
+        height: 35px;
+
+        margin: 0 0 0 5px;
+    }
+
+
+    .goals-heading h2 {
+        font-size: 50px;
     }
 
 
     .orange-circle {
         width: 280px;
+    }
+
+
+    .sustainability-conclusion h2 {
+        font-size: 55px;
     }
 
 
